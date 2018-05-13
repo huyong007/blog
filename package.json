@@ -15,7 +15,7 @@
     "express-useragent": "^1.0.12",
     "http-errors": "~1.6.2",
     "marked": "^0.3.19",
-    "mongoose": "^5.0.13",
+    "mongoose": "^5.1.0",
     "morgan": "~1.9.0",
     "serve-favicon": "^2.5.0",
     "supervisor": "^0.12.0"
