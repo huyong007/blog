@@ -7,7 +7,7 @@ var PostModel = require('./models/post');
 router.get('/', function(req, res, next) {
   res.render('index.ejs', { title: 'Express' });
 });
-console.log('f3');
+
 /* GET posts page. */
 router.get('/posts', function(req, res, next) {
   res.render('posts', { title: '今天是个好天气'} );

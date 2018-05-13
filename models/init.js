@@ -7,4 +7,5 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
   console.log('MongoDB连接成功！')
 });
-
+var debug = require('debug')('blog:init');
+debug('test init log');

@@ -44,7 +44,7 @@ app.use(function(req, res, next) {
   next(err);
 
 });
-var debug = require('debug')('blog:www');
+var debug = require('debug')('blog:app');
 debug('test app log');
 // error handler
 app.use(function(err, req, res, next) {
