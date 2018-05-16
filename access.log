@@ -1,0 +1,58 @@
+::1 - - [16/May/2018:04:24:11 +0000] "GET /posts HTTP/1.1" 304 - "http://localhost:27017/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
+::1 - - [16/May/2018:04:24:11 +0000] "GET /stylesheets/style.css HTTP/1.1" 304 - "http://localhost:27017/posts" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
+::1 - - [16/May/2018:04:24:12 +0000] "GET /images/bg.png HTTP/1.1" 404 2119 "http://localhost:27017/stylesheets/style.css" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
+::1 - - [16/May/2018:04:25:32 +0000] "GET /posts HTTP/1.1" 304 - "http://localhost:27017/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
+::1 - - [16/May/2018:04:25:32 +0000] "GET /api/posts HTTP/1.1" - - "http://localhost:27017/posts" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
+::1 - - [16/May/2018:04:25:32 +0000] "GET /stylesheets/style.css HTTP/1.1" 304 - "http://localhost:27017/posts" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
+::1 - - [16/May/2018:04:25:33 +0000] "GET /images/bg.png HTTP/1.1" 404 2119 "http://localhost:27017/stylesheets/style.css" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
+::1 - - [16/May/2018:04:25:50 +0000] "GET /posts HTTP/1.1" 304 - "http://localhost:27017/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
+::1 - - [16/May/2018:04:25:50 +0000] "GET /api/posts HTTP/1.1" - - "http://localhost:27017/posts" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
+::1 - - [16/May/2018:04:25:50 +0000] "GET /stylesheets/style.css HTTP/1.1" 304 - "http://localhost:27017/posts" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
+::1 - - [16/May/2018:04:25:51 +0000] "GET /images/bg.png HTTP/1.1" 404 2119 "http://localhost:27017/stylesheets/style.css" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
+::1 - - [16/May/2018:04:25:56 +0000] "GET /posts HTTP/1.1" 304 - "http://localhost:27017/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
+::1 - - [16/May/2018:04:25:56 +0000] "GET /api/posts HTTP/1.1" - - "http://localhost:27017/posts" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
+::1 - - [16/May/2018:04:25:56 +0000] "GET /stylesheets/style.css HTTP/1.1" 304 - "http://localhost:27017/posts" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
+::1 - - [16/May/2018:04:25:56 +0000] "GET /images/bg.png HTTP/1.1" 404 2119 "http://localhost:27017/stylesheets/style.css" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
+::1 - - [16/May/2018:04:25:58 +0000] "GET /posts HTTP/1.1" 304 - "http://localhost:27017/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
+::1 - - [16/May/2018:04:25:58 +0000] "GET /api/posts HTTP/1.1" - - "http://localhost:27017/posts" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
+::1 - - [16/May/2018:04:25:58 +0000] "GET /stylesheets/style.css HTTP/1.1" 304 - "http://localhost:27017/posts" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
+::1 - - [16/May/2018:04:25:58 +0000] "GET /images/bg.png HTTP/1.1" 404 2119 "http://localhost:27017/stylesheets/style.css" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
+::1 - - [16/May/2018:04:27:58 +0000] "GET /api/posts HTTP/1.1" - - "http://localhost:27017/posts" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
+::1 - - [16/May/2018:04:29:58 +0000] "GET /api/posts HTTP/1.1" - - "http://localhost:27017/posts" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
+::1 - - [16/May/2018:04:30:41 +0000] "GET /posts HTTP/1.1" 304 - "http://localhost:27017/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
+::1 - - [16/May/2018:04:30:41 +0000] "GET /stylesheets/style.css HTTP/1.1" 304 - "http://localhost:27017/posts" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
+::1 - - [16/May/2018:04:30:41 +0000] "GET /images/bg.png HTTP/1.1" 404 2119 "http://localhost:27017/stylesheets/style.css" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
+::1 - - [16/May/2018:04:30:44 +0000] "GET /posts HTTP/1.1" 304 - "http://localhost:27017/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
+::1 - - [16/May/2018:04:30:44 +0000] "GET /api/posts HTTP/1.1" - - "http://localhost:27017/posts" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
+::1 - - [16/May/2018:04:30:44 +0000] "GET /stylesheets/style.css HTTP/1.1" 304 - "http://localhost:27017/posts" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
+::1 - - [16/May/2018:04:30:45 +0000] "GET /images/bg.png HTTP/1.1" 404 2119 "http://localhost:27017/stylesheets/style.css" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
+::1 - - [16/May/2018:04:31:25 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
+::1 - - [16/May/2018:04:31:25 +0000] "GET /api/posts HTTP/1.1" - - "http://localhost:27017/posts" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
+::1 - - [16/May/2018:04:31:25 +0000] "GET /stylesheets/style.css HTTP/1.1" 304 - "http://localhost:27017/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
+::1 - - [16/May/2018:04:31:25 +0000] "GET /images/bg.png HTTP/1.1" 404 2119 "http://localhost:27017/stylesheets/style.css" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
+::1 - - [16/May/2018:04:35:50 +0000] "GET / HTTP/1.1" 304 -
+::1 - - [16/May/2018:04:35:50 +0000] "GET /stylesheets/style.css HTTP/1.1" 304 -
+::1 - - [16/May/2018:04:35:50 +0000] "GET /images/bg.png HTTP/1.1" 404 2119
+GET / 304 - - 23.888 ms
+GET /stylesheets/style.css 304 - - 3.766 ms
+GET /images/bg.png 404 2119 - 6.984 ms
+GET / 304 - - 3.355 ms
+GET /stylesheets/style.css 304 - - 1.256 ms
+GET /images/bg.png 404 2119 - 4.307 ms
+::1 - GET / HTTP/1.1 304 - - 21.701 ms
+::1 - GET /stylesheets/style.css HTTP/1.1 304 - - 3.257 ms
+::1 - GET /images/bg.png HTTP/1.1 404 2119 - 6.958 ms
+::1 - GET / HTTP/1.1 304 - - 3.429 ms
+::1 - GET /stylesheets/style.css HTTP/1.1 304 - - 1.158 ms
+::1 - GET /images/bg.png HTTP/1.1 404 2119 - 4.465 ms
+::1 - GET /posts HTTP/1.1 304 - - 4.926 ms
+::1 - GET /stylesheets/style.css HTTP/1.1 304 - - 1.737 ms
+::1 - GET /images/bg.png HTTP/1.1 404 2119 - 2.940 ms
+::1 - GET /posts HTTP/1.1 304 - - 3.241 ms
+::1 - GET /api/posts HTTP/1.1 - - - - ms
+::1 - GET /stylesheets/style.css HTTP/1.1 304 - - 1.078 ms
+::1 - GET /images/bg.png HTTP/1.1 404 2119 - 2.911 ms
+::1 - GET /posts HTTP/1.1 304 - - 2.639 ms
+::1 - GET /api/posts HTTP/1.1 - - - - ms
+::1 - GET /stylesheets/style.css HTTP/1.1 304 - - 1.790 ms
+::1 - GET /images/bg.png HTTP/1.1 404 2119 - 4.707 ms
