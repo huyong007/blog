@@ -19,9 +19,18 @@ var page = require('./route.page');
 var app = express();
 
 // create a write stream (in append mode)
-var accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), {flags: 'a'})
-// setup the logger
-app.use(logger('short', {stream: accessLogStream}))
+var accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' })
+
+// EXAMPLE: only log error responses
+app.use(logger(function (tokens, req, res) {
+  return [
+    tokens.method(req, res),
+    tokens.url(req, res),
+    tokens.status(req, res),
+    tokens.res(req, res, 'content-length'), '-',
+    tokens['response-time'](req, res), 'ms'
+  ].join(' ')
+}, { stream: accessLogStream }));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -32,7 +41,7 @@ app.use(expressLayouts);
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.use(logger('dev'));
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -40,11 +49,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 //这里可以加上各种的中间件
 
 app.use('/', function (req, res, next) {
-  console.log("process one is " + ' ' + req.path);
+  console.log('process one =' + ' ' + req.path);
   next();
 }, page);
-app.use('/api',function (req, res, next) {
-  console.log("process two is " + ' ' + req.path);
+app.use('/api', function (req, res, next) {
+  console.log('process two =' + ' ' + req.path);
   next();
 }, api);
 
