@@ -15,3 +15,28 @@ GET /stylesheets/style.css 304  - 0.848 ms
 GET /images/bg.png 404 2119 - 5.032 ms
 GET /api/posts   -  ms
 GET /api/posts   -  ms
+GET / 200  - 4.083 ms
+GET /favicon.ico 200  - 1.397 ms
+GET / 200  - 0.488 ms
+GET /favicon.ico 200  - 0.450 ms
+GET / 200  - 0.378 ms
+GET /favicon.ico 200  - 0.441 ms
+GET / 200  - 0.433 ms
+GET /favicon.ico 200  - 0.596 ms
+GET / 200  - 0.777 ms
+GET /favicon.ico 200  - 0.405 ms
+GET / 200 893 - 180.277 ms
+GET /stylesheets/style.css 200 153 - 31.796 ms
+GET /images/bg.png 200  - 1.982 ms
+GET /favicon.ico 200  - 1.285 ms
+GET / 304  - 4.675 ms
+GET /stylesheets/style.css 304  - 3.981 ms
+GET /images/bg.png 200  - 2.446 ms
+GET /favicon.ico 200  - 1.562 ms
+GET /posts 200 1870 - 82.688 ms
+GET /stylesheets/style.css 304  - 0.981 ms
+GET /images/bg.png 200  - 0.975 ms
+GET /favicon.ico 200  - 6.347 ms
+GET /api/posts 200  - 5.134 ms
+GET /posts 200  - 0.483 ms
+GET /favicon.ico 200  - 0.449 ms

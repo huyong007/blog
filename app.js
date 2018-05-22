@@ -17,20 +17,24 @@ var api = require('./route.api');
 var page = require('./route.page');
 
 var app = express();
+// create application/json parser
+var jsonParser = bodyParser.json()
 
-// create a write stream (in append mode)
-var accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' })
+// create application/x-www-form-urlencoded parser
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
-// EXAMPLE: only log error responses
-app.use(logger(function (tokens, req, res) {
-  return [
-    tokens.method(req, res),
-    tokens.url(req, res),
-    tokens.status(req, res),
-    tokens.res(req, res, 'content-length'), '-',
-    tokens['response-time'](req, res), 'ms'
-  ].join(' ')
-}, { stream: accessLogStream }));
+// POST /login gets urlencoded bodies
+app.post('/login', urlencodedParser, function (req, res) {
+  if (!req.body) return res.sendStatus(400)
+  res.send('welcome, ' + req.body.username)
+})
+
+// POST /api/users gets JSON bodies
+app.post('/api/users', jsonParser, function (req, res) {
+  if (!req.body) return res.sendStatus(400)
+  // create user in req.body
+})
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -48,6 +52,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 //这里可以加上各种的中间件
 
+
+
 app.use('/', function (req, res, next) {
   console.log('process one =' + ' ' + req.path);
   next();
@@ -57,6 +63,7 @@ app.use('/api', function (req, res, next) {
   next();
 }, api);
 
+
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   var err = new Error('Not Found');
@@ -64,8 +71,7 @@ app.use(function (req, res, next) {
   next(err);
 
 });
-var debug = require('debug')('blog:app');
-debug('test app log');
+
 // error handler
 app.use(function (err, req, res, next) {
   // set locals, only providing error in development
@@ -78,4 +84,3 @@ app.use(function (err, req, res, next) {
 });
 
 module.exports = app;
-debug('test app log2');
