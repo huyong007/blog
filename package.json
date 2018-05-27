@@ -12,6 +12,7 @@
     "ejs": "~2.5.7",
     "express": "~4.16.0",
     "express-ejs-layouts": "^2.4.0",
+    "express-session": "^1.15.6",
     "express-useragent": "^1.0.12",
     "http-errors": "~1.6.2",
     "marked": "^0.3.19",
