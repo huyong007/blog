@@ -1,102 +1,39 @@
-
-
-
-//require('./models/init');
+// 在初始化app.js最开头就连接数据库
+require('./models/init');
 var express = require('express');
+var expressLayouts = require('express-ejs-layouts');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
-var fs = require('fs')
-var expressLayouts = require('express-ejs-layouts');
 var bodyParser = require('body-parser');
-var session = require('express-session')
-
-
 
 var api = require('./route.api');
 var page = require('./route.page');
 
 var app = express();
-// create application/json parser
-var jsonParser = bodyParser.json()
-
-// create application/x-www-form-urlencoded parser
-var urlencodedParser = bodyParser.urlencoded({ extended: false })
-
-// POST /login gets urlencoded bodies
-app.post('/login', urlencodedParser, function (req, res) {
-  if (!req.body) return res.sendStatus(400)
-  res.send('welcome, ' + req.body.username)
-})
-
-// POST /api/users gets JSON bodies
-app.post('/api/users', jsonParser, function (req, res) {
-  if (!req.body) return res.sendStatus(400)
-  // create user in req.body
-})
-
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-
 app.set('view engine', 'ejs');
-
 app.use(expressLayouts);
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-
+app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-//这里可以加上各种的中间件
-app.use(session({
-  secret: 'keyboard cat',
-  resave: false,
-  saveUninitialized: true
-}))
 
-app.use(function (req, res, next) {
-  if (!req.session.views) {
-    req.session.views = {}
-  }
-
-  // get the url pathname
-  var pathname = parseurl(req).pathname
-
-  // count the views
-  req.session.views[pathname] = (req.session.views[pathname] || 0) + 1
-
-  next()
-})
-
-app.get('/foo', function (req, res, next) {
-  res.send('you viewed this page ' + req.session.views['/foo'] + ' times')
-})
-
-app.get('/bar', function (req, res, next) {
-  res.send('you viewed this page ' + req.session.views['/bar'] + ' times')
-})
-
-
-app.use('/', function (req, res, next) {
-  console.log('process one =' + ' ' + req.path);
-  next();
-}, page);
-app.use('/api', function (req, res, next) {
-  console.log('process two =' + ' ' + req.path);
-  next();
-}, api);
-
+app.use('/', page);
+app.use('/api', api);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
   next(err);
-
 });
 
 // error handler
