@@ -31,14 +31,21 @@
      methods: {
       fetchData () {
   
-        axios.get('/api/posts')
+        axios.get('/api/v1/posts')
           .then(function (response) {
-            vm.postsList = response.data.postsList;
+		  return response.data;
+		  })
+		  .then(function(data){
+		   vm.postsList = data.postsList;
             vm.postsList.forEach((element) => element.url = '/posts/show?id=' + element._id);
-       })
+		  })
+		  .catch(function(err){
+		  alert(err);
+		  })
+           
+       }
       }
-    }
-          });
+    });
   
  vm.fetchData();
 </script>

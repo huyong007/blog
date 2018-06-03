@@ -6,7 +6,7 @@ const PostSchema = new Schema({
     title:String,
     content:String
 });
-var debug = require('debug')('blog:mpost');
+var debug = require('debug')('blog:mopost');
 debug('test mpost log');
 
 

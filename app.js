@@ -1,4 +1,4 @@
-// 在初始化app.js最开头就连接数据库
+/* 在初始化app.js最开头就连接数据库*/
 require('./models/init');
 var express = require('express');
 var expressLayouts = require('express-ejs-layouts');
@@ -8,6 +8,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var config = require('./config');
+var auth = require('./middlewares/auth');
 var api = require('./route.api');
 var page = require('./route.page');
 
@@ -23,11 +25,13 @@ app.use(expressLayouts);
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
+app.use(cookieParser(config.cookieName));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(auth.authUser);
+
 app.use('/', page);
-app.use('/api', api);
+app.use('/api/v1', api);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
