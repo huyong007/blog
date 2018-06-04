@@ -1,11 +1,15 @@
 var mongoose = require('mongoose');
-
+var debug = require('debug')('blog:init');
+var config = require('../config');
+debug('log init' + '  ' + config.mongodbUrl)
 mongoose.connect('mongodb://127.0.0.1:32769/blog');
 
 var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function() {
+db.on('error', function (err) {
+  console.log(err);
+});
+db.once('open', function () {
   console.log('数据库连接成功！')
 });
-var debug = require('debug')('blog:init');
+
 debug('test init log');

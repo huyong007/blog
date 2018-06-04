@@ -1,5 +1,8 @@
 /* 在初始化app.js最开头就连接数据库*/
+var debug = require('debug')('blog:app');
+debug('test app js');
 require('./models/init');
+debug('test app js2');
 var express = require('express');
 var expressLayouts = require('express-ejs-layouts');
 var path = require('path');
