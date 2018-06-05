@@ -5,6 +5,7 @@ var express = require('express');
 var router = express.Router();
 var config = require('./config');
 var PostModel = require('./models/post');
+var auth = require('./middlewares/auth');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -16,13 +17,13 @@ router.get('/posts', function (req, res, next) {
   res.render('posts', { title: '我的文章' });
 });
 
-/*GET posts create page*/
-router.get('/posts/create', function (req, res, next) {
+/* GET posts create page. */
+router.get('/posts/create', auth.adminRequired, function(req, res, next) {
   res.render('create');
 });
 
-/* GET post edit page. */
-router.get('/posts/edit', function (req, res, next) {
+/* GET posts edit page. */
+router.get('/posts/edit', auth.adminRequired, function(req, res, next) {
   var id = req.query.id;
 
   res.render('edit', { id });
@@ -49,6 +50,7 @@ router.get('/signin', function (req, res, next) {
 
 /* GET signout */
 router.get('/signout', function (req, res, next) {
+  req.session.user = null;
   res.clearCookie(config.cookieName, { path: '/' });
   res.redirect('/');
 });

@@ -22,20 +22,20 @@ var vm = new Vue({
   },
   methods: {
     submit () {
-    axios.post('/api/v1/posts',
-      {
-        title: vm.title,
-        content: vm.content
-      })
-      .then(function(response) {
-        return response.data;
-      })
-	  .then(function(data){
-	  window.location = '/posts/show?id=' + data.post._id;
-	  })
-      .catch(function(err) {
-        alert(err);
-      })
+      axios.post('/api/v1/posts',
+        {
+          title: vm.title,
+          content: vm.content
+        })
+        .then(function(response) {
+          return response.data;
+        })
+        .then(function(data) {
+          window.location = '/posts/show?id=' + data.post._id;
+        })
+        .catch(function(err) {
+          alert(err.response.data.error);
+        })
     }
   }
 });
