@@ -18,25 +18,33 @@ router.get('/posts', function (req, res, next) {
 });
 
 /* GET posts create page. */
-router.get('/posts/create', auth.adminRequired, function(req, res, next) {
+router.get('/posts/create', auth.adminRequired, function (req, res, next) {
   res.render('create');
 });
 
 /* GET posts edit page. */
-router.get('/posts/edit', auth.adminRequired, function(req, res, next) {
+router.get('/posts/edit', auth.adminRequired, function (req, res, next) {
   const { id } = req.query;
 
   res.render('edit', { id });
 });
 
 /* GET posts show page. */
-router.get('/posts/show', function(req, res, next) {
+router.get('/posts/show', function (req, res, next) {
   const { id } = req.query;
 
-  PostModel.findOne({ _id: id }, function (err, post) {
+  PostModel
+    .findOne({ _id: id })
+    .exec()
+    .then(function (post) {
+      post.mkContent = marked(post.content);
+      res.render('show', { post });
+    })
+    .catch(next);
+/*   function (err, post) {
     post.mkContent = marked(post.content);
     res.render('show', { post });
-  });
+  }); */
 });
 
 /* GET signup page. */
