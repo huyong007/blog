@@ -31,16 +31,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser(config.cookieName));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(
-  session({
-    secret: config.sessionSecret,
-    store: new MongoStore({
-      url: config.mongodbUrl
-    }),
-    resave: true,
-    saveUninitialized: true
-  })
-);
 
 app.use(auth.authUser);
 
@@ -63,7 +53,7 @@ app.use(function (err, req, res, next) {
   // the error response
   res.status(err.status || 500).format({
     json() {
-      res.send({error: err.toString()});
+      res.send({ error: err.toString() });
     },
 
     html() {
@@ -77,4 +67,4 @@ app.use(function (err, req, res, next) {
   });
 });
 
-module.exports = app;
+export default app;
