@@ -16,7 +16,7 @@ router.get('/users', function (req, res, next) {
 router.get('/posts', function (req, res, next) {
 
   PostModel.find({}, {})
-    .exex()
+    .exec()
     .then(posts => {
       res.json({ postsList: posts });
     })

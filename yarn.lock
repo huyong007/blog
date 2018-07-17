@@ -1896,6 +1896,10 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
+jwt-simple@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/jwt-simple/-/jwt-simple-0.5.1.tgz#79ea01891b61de6b68e13e67c0b4b5bda937b294"
+
 kareem@2.0.7:
   version "2.0.7"
   resolved "https://registry.yarnpkg.com/kareem/-/kareem-2.0.7.tgz#8d260366a4df4236ceccec318fcf10c17c5beb22"
@@ -2080,6 +2084,10 @@ mixin-deep@^1.2.0:
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
     minimist "0.0.8"
+
+moment@^2.22.2:
+  version "2.22.2"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
 
 mongodb-core@2.1.19:
   version "2.1.19"
