@@ -14,7 +14,7 @@ module.exports = {
       host: '154.8.171.134',
       port: "22",
       ref: 'origin/master',
-      repo: 'git@github.com:huyong007/blog-express.git',
+      repo: 'https://github.com:huyong007/blog-express.git',
       path: '/www/website/production',
       'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production',
       env: {
