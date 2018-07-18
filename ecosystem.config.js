@@ -14,7 +14,7 @@ module.exports = {
       host: '154.8.171.134',
       port: "22",
       ref: 'origin/master',
-      repo: 'github.com:huyong007/blog-express.git',
+      repo: 'git@github.com:huyong007/blog-express.git',
       path: '/www/website/production',
       'post-deploy': 'yarn && pm2 reload ecosystem.config.js --env dev',
       env: {
