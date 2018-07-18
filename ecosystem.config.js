@@ -15,7 +15,7 @@ module.exports = {
       port: "22",
       ref: 'origin/master',
       repo: 'git@github.com:huyong007/blog-express.git',
-      path: '/home/blog/dev',
+      path: '/home/blog',
       ssh_options: ["StrictHostKeyChecking=no", "PasswordAuthentication=no"],
       'post-deploy': 'yarn && pm2 reload ecosystem.config.js --env dev',
       env: {
