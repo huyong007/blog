@@ -16,7 +16,7 @@ module.exports = {
       ref: 'origin/master',
       repo: 'github.com:huyong007/blog-express.git',
       path: '/www/website/production',
-      'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production',
+      'post-deploy': 'yarn && pm2 reload ecosystem.config.js --env dev',
       env: {
         NODE_ENV: 'dev'
 
