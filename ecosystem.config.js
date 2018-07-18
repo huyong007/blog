@@ -19,7 +19,7 @@ module.exports = {
       ssh_options: ["StrictHostKeyChecking=no", "PasswordAuthentication=no"],
       'post-deploy': 'yarn && pm2 reload ecosystem.config.js --env dev',
       env: {
-        NODE_ENV: 'dev'
+        NODE_ENV: 'dev',
 
       }
     }
