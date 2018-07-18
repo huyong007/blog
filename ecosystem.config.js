@@ -2,18 +2,13 @@ module.exports = {
   apps: [{
     name: 'blog-express',
     script: './dist/bin/www',
+    watch:true,
     env: {
-      COMMON_VARIABLE: 'true',
-
-
+      NODE_ENV: "dev",
     },
-    env_production: {
-      NODE_ENV: 'dev'
-    }
   }],
 
   deploy: {
-
     dev: {
       user: 'blog',
       host: '154.8.171.134',
