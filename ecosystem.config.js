@@ -8,13 +8,13 @@ module.exports = {
 
     },
     env_production: {
-      NODE_ENV: 'production'
+      NODE_ENV: 'dev'
     }
   }],
 
   deploy: {
 
-    production: {
+    dev: {
       user: 'blog',
       host: '154.8.171.134',
       port: "22",
