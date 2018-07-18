@@ -1,32 +1,32 @@
 module.exports = {
-  apps : [{
-    name      : 'blog-express',
+  apps: [{
+    name: 'blog-express',
     script: './dist/bin/www',
     env: {
       COMMON_VARIABLE: 'true',
-      
+
 
     },
-    env_production : {
-      NODE_ENV: 'dev'
+    env_production: {
+      NODE_ENV: 'production'
     }
   }],
 
-  deploy : {
-    dev:{
-      production: {
-        user: 'blog',
-        host: '154.8.171.134',
-        port: "22",
-        ref: 'origin/master',
-        repo: 'git@github.com:huyong007/blog-express.git',
-        path: '/www/website/production',
-        'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production',
-          env: {
-          NODE_ENV: 'dev'
-        }
+  deploy: {
+
+    production: {
+      user: 'blog',
+      host: '154.8.171.134',
+      port: "22",
+      ref: 'origin/master',
+      repo: 'git@github.com:huyong007/blog-express.git',
+      path: '/www/website/production',
+      'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production',
+      env: {
+        NODE_ENV: 'dev'
+
       }
     }
-    
+
   }
 };
