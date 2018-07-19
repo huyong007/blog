@@ -11,7 +11,7 @@ module.exports = {
   deploy: {
     dev: {
       user: 'blog',
-      host: '154.8.171.134',
+      host: '47.92.23.193',
       port: "22",
       ref: 'origin/master',
       repo: 'git@github.com:huyong007/blog-express.git',
