@@ -6,12 +6,12 @@ module.exports = {
       NODE_ENV: 'development'
     },
     env_production : {
-      NODE_ENV: 'production'
+      NODE_ENV: 'dev'
     }
   }],
 
   deploy : {
-    production : {
+    dev : {
       user : 'blog',
       host : '47.92.23.193',
       ref  : 'origin/master',
