@@ -1,6 +1,7 @@
 {
   "name": "blog",
   "version": "1.6.0",
+  "license": "UNLICENSED",
   "private": true,
   "scripts": {
     "dev": "nodemon ./src/bin/www --exec \"node -r dotenv/config -r babel-register\"",
