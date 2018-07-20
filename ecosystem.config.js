@@ -1,28 +1,23 @@
 module.exports = {
-  apps: [{
-    name: 'blog-express',
-    script: './dist/bin/www',
-    watch:true,
+  apps : [{
+    name      : 'blog-express',
+    script    : './dist/bin/www',
     env: {
-      NODE_ENV: "dev",
+      NODE_ENV: 'development'
     },
+    env_production : {
+      NODE_ENV: 'production'
+    }
   }],
 
-  deploy: {
-    dev: {
-      user: 'blog',
-      host: '47.92.23.193',
-      port: "22",
-      ref: 'origin/master',
-      repo: 'git@github.com:huyong007/blog-express.git',
-      path: '/home/blog/devblog',
-      ssh_options: ["StrictHostKeyChecking=no", "PasswordAuthentication=no"],
-      'post-deploy': 'yarn && pm2 reload ecosystem.config.js --env dev',
-      env: {
-        NODE_ENV: 'dev',
-
-      }
+  deploy : {
+    production : {
+      user : 'blog',
+      host : '47.92.23.193',
+      ref  : 'origin/master',
+      repo : 'git@github.com:blog-express.git',
+      path : '/home/devblog',
+      'post-deploy' : 'yarn add && npm install && pm2 reload ecosystem.config.js --env production'
     }
-
   }
 };
