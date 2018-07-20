@@ -17,7 +17,7 @@ module.exports = {
       ref  : 'origin/master',
       repo : 'git@github.com:huyong007/blog-express.git',
       path : '/home/blog/devblog',
-      'post-deploy' : 'yarn add && npm install && pm2 reload ecosystem.config.js --env production'
+      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production'
     }
   }
 };
