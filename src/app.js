@@ -31,7 +31,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser(config.cookieName));
 app.use(express.static(path.join(__dirname, 'public')));
 
-
+// 使用认证信息
 app.use(auth.authUser);
 
 app.use('/', page);
