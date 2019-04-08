@@ -1,3 +1,5 @@
+
+// 12 路由归类
 // 在初始化app.js最开头就连接数据库
 require('./models/init');
 import express from 'express';
