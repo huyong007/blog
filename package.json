@@ -25,7 +25,7 @@
     "marked": "^0.3.19",
     "moment": "^2.22.2",
     "mongoose": "^5.1.0",
-    "morgan": "~1.9.0",
+    "morgan": "~1.9.1",
     "serve-favicon": "^2.5.0",
     "supervisor": "^0.12.0"
   },
