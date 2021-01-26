@@ -139,7 +139,9 @@ def datetime_filter(t):
 
 @asyncio.coroutine
 def init(loop):
+    # 创建数据库的长链接
     yield from orm.create_pool(loop=loop, **configs.db)
+    # 创建一个loop,所有数据可以经过多个中间件
     app = web.Application(loop=loop, middlewares=[
         logger_factory, auth_factory, response_factory
     ])
