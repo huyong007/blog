@@ -93,7 +93,8 @@ def index(*, page='1'):
     page_index = get_page_index(page)
     num = yield from Blog.findNumber('count(id)')
     page = Page(num)
-    print('debugger num is %s,page is %s' % num % page)
+    # logging.info(num,page,'num page ')
+    # print('debugger num is %s,page is %s' % (num ,page))
     if num == 0:
         blogs = []
     else:
